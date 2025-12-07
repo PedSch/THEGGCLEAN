@@ -109,7 +109,7 @@ export default async function EventPage({ params }) {
                     <span className="uppercase text-[#111111] text-xl leading-6">
                       {item.time}
                     </span>
-                    <span className="uppercase text-[#111111] text-xl leading-6">
+                    <span className="uppercase text-[#111111] text-[15px] leading-5 font-bold">
                       {item.title}
                     </span>
                   </div>
