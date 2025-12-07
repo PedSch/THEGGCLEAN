@@ -1,3 +1,27 @@
+# Environment Setup
+
+### Node.js
+This project uses **Node 20.x**.
+
+If you're using `nvm`:
+
+```bash
+nvm install 20
+nvm use 20
+```
+
+Recommended: create a `.nvmrc` file in the project root that contains just:
+
+```
+20
+```
+
+If you don't have nvm installed yet:
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
 # The Gradient Blueprint Event Page
 
 ## Overview
@@ -80,7 +104,7 @@ TheGradientGroup/
 - No database is used; all data is static in the backend for demo purposes.
 - The project is version-controlled with Git. Large files and history have been cleaned for GitHub compatibility.
 - If you need to add new events, edit the `events` array in `backend/index.js`.
-- **Note:** The backend entry point is `index.js`. Any previous `server.js` file has been removed for clarity.
+- **Note:** The backend entry point is `index.js`.
 
 ---
 
