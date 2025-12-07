@@ -81,8 +81,6 @@ TheGradientGroup/
 
 ---
 
-## Credits
-- **Design:** Provided Figma file
-- **Development:** The Gradient Group Full Stack Assessment
+
 
 ---
