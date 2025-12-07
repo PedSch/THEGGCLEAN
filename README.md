@@ -21,13 +21,14 @@ TheGradientGroup/
 ---
 
 ## Backend (Express.js)
-- **Location:** `backend/`
-- **How to run:**
+**Location:** `backend/`
+**How to run:**
   ```sh
   cd backend
   npm install
   npm run dev
   # or: node index.js
+  # Entry point: index.js (do NOT use server.js)
   ```
 - **Endpoints:**
   - `GET /api/events` – List all events
@@ -74,10 +75,12 @@ TheGradientGroup/
 ---
 
 ## Development Notes
+
 - All code is written in JavaScript (no TypeScript).
 - No database is used; all data is static in the backend for demo purposes.
 - The project is version-controlled with Git. Large files and history have been cleaned for GitHub compatibility.
 - If you need to add new events, edit the `events` array in `backend/index.js`.
+- **Note:** The backend entry point is `index.js`. Any previous `server.js` file has been removed for clarity.
 
 ---
 

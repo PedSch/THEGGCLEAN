@@ -211,7 +211,7 @@ export default async function EventPage({ params }) {
   <div className="relative flex flex-row justify-center items-end min-h-[340px] mt-8 mb-12">
     {event.previousEvents.slice(0, 3).map((pe, idx) => {
       const baseClasses =
-        "relative w-[350px] h-[332px] rounded-xl overflow-hidden mx-[-40px] flex items-end transform-gpu transition-transform duration-500 ease-out";
+        "relative w-[350px] h-[332px] overflow-hidden mx-[-40px] flex items-end transform-gpu transition-transform duration-500 ease-out";
 
       const poseClasses =
         idx === 0
@@ -231,18 +231,34 @@ export default async function EventPage({ params }) {
 
       return (
         <div key={idx} className={`${baseClasses} ${poseClasses}`}>
-          {/* Vertically stretched image with improved framing */}
+          {/* Stretched image to fill the shadow card */}
           <img
-            src={idx === 0 ? '/assets/theevent5.png' : idx === 1 ? '/assets/theevent1.png' : '/assets/theevent2.png'}
+            src={
+              idx === 0 ? '/assets/theevent5.png'
+              : idx === 1 ? '/assets/theevent1.png'
+              : '/assets/theevent2.png'
+            }
             alt={pe.name}
-            className="
-              absolute inset-0 
-              w-full h-full 
-              object-cover 
+            width={idx === 0 ? 439 : idx === 1 ? undefined : 423}
+            height={idx === 0 ? 326 : idx === 1 ? undefined : 320}
+            className={`
+              absolute inset-0
+              w-full h-full
+              object-cover
               !shadow-none !outline-none !ring-0
-            "
+              rounded-xl
+              scale-y-[1.6]
+              translate-y-4
+            `}
             style={{ objectFit: 'cover', objectPosition }}
           />
+
+
+          {/* text overlay */}
+          <div className="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none">
+            <p className="text-base font-medium text-white">{pe.name}</p>
+            <p className="text-sm text-neutral-200">{pe.location}</p>
+          </div>
         </div>
       );
     })}
