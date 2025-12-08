@@ -197,11 +197,13 @@ export default async function EventPage({ params }) {
                   our past events
                 </span>
               </div>
-              <div className="w-full h-[420px] bg-neutral-100 overflow-hidden flex items-center justify-center">
+              <div className="w-[449px] h-[679px] overflow-hidden flex items-center justify-center">
                 <img
                   src={"/assets/theevent4.png"}
                   alt="The Event"
-                  className="w-full h-full object-cover rounded-lg"
+                  width={449}
+                  height={679}
+                  className="block"
                 />
               </div>
             </div>
@@ -210,24 +212,22 @@ export default async function EventPage({ params }) {
 {event.previousEvents && event.previousEvents.length > 0 && (
   <div className="relative flex flex-row justify-center items-end min-h-[340px] mt-8 mb-12">
     {event.previousEvents.slice(0, 3).map((pe, idx) => {
+      // Card base classes
       const baseClasses =
         idx === 0
-          ? "relative w-[439px] h-[326px] overflow-hidden mx-[-40px] flex items-end transform-gpu transition-transform duration-500 ease-out"
+          ? "absolute left-0 bottom-0 w-[439px] h-[326px] overflow-hidden flex items-end transform-gpu transition-transform duration-500 ease-out"
         : idx === 1
-          ? "relative w-[472px] h-[345px] overflow-hidden mx-[-40px] flex items-end transform-gpu transition-transform duration-500 ease-out"
-        : "relative w-[423px] h-[320px] overflow-hidden mx-[-40px] flex items-end transform-gpu transition-transform duration-500 ease-out";
+          ? "absolute left-1/2 bottom-4 w-[472px] h-[345px] overflow-hidden flex items-end transform-gpu transition-transform duration-500 ease-out -translate-x-1/2 z-30"
+        : "absolute right-0 bottom-0 w-[423px] h-[320px] overflow-hidden flex items-end transform-gpu transition-transform duration-500 ease-out";
 
+      // Card pose classes
       const poseClasses =
         idx === 0
-          ? "z-20 rotate-[15deg] -translate-x-6 -translate-y-2 md:-translate-x-8 scale-95"
+          ? "z-20 rotate-[7deg] -translate-x-2 -translate-y-2 md:-translate-x-4 scale-97"
           : idx === 1
-          ? "z-30 scale-[1.08] -translate-y-2"
-          : "z-20 -rotate-[15deg] translate-x-6 -translate-y-2 md:translate-x-8 scale-95";
+          ? "scale-[1.08]"
+          : "z-20 -rotate-[7deg] translate-x-2 -translate-y-2 md:translate-x-4 scale-97";
 
-      // Adjust gradient direction based on card rotation
-      // Remove gradients and raise text for all cards
-      // Move right card text slightly right
-      // Adjust object position for better framing
       let objectPosition = "center";
       if (idx === 0) objectPosition = "left center";
       if (idx === 1) objectPosition = "center center";
@@ -254,7 +254,6 @@ export default async function EventPage({ params }) {
             style={{ objectFit: 'cover', objectPosition }}
           />
 
-
           {/* text overlay */}
           <div className="absolute inset-0 flex flex-col justify-end pb-5 px-4 pointer-events-none">
             <p className="text-base font-medium text-white">{pe.name}</p>
@@ -263,6 +262,8 @@ export default async function EventPage({ params }) {
         </div>
       );
     })}
+    {/* Container for stacking cards */}
+    <div className="relative w-full h-[360px]" />
   </div>
 )}
 

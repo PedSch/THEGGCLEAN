@@ -1,7 +1,17 @@
 # Environment Setup
 
 ### Node.js
-This project uses **Node 20.x**.
+
+**Important:** This project requires **Node 20.x**. If you are on Node 18 or lower, you must run:
+
+```bash
+nvm install 20
+nvm use 20
+```
+
+You must do this before running `npm install` or `npm run dev` in either the frontend or backend. If you skip this step, you will see errors about Node version mismatches.
+
+Recommended: create a `.nvmrc` file in the project root that contains just:
 
 If you're using `nvm`:
 
