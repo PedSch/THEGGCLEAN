@@ -253,12 +253,6 @@ export default async function EventPage({ params }) {
             `}
             style={{ objectFit: 'cover', objectPosition }}
           />
-
-          {/* text overlay */}
-          <div className="absolute inset-0 flex flex-col justify-end pb-5 px-4 pointer-events-none">
-            <p className="text-base font-medium text-white">{pe.name}</p>
-            <p className="text-sm text-neutral-200">{pe.location}</p>
-          </div>
         </div>
       );
     })}
