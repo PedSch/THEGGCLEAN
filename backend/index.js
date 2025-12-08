@@ -17,9 +17,9 @@ const events = [
     location: "Soho House, New York",
     heroImageUrl: "/assets/hero.png",
     intro:
-      "Join us for an exclusive evening with Rich Tu, the award-winning designer behind the official NY/NJ 2026 FIFA World Cup poster, and a creative powerhouse known for his work with Nike, MTV, and culture-shaping campaigns across the globe.",
+      "Join us for an exclusive evening with Rich Tu, the award winning designer behind the official NY/NJ 2026 FIFA World Cup poster, and a creative powerhouse known for his work with Nike, MTV, and culture shaping campaigns across the globe.",
     description:
-      "Presented as part of The Gradient's Blueprint Series, this fireside chat—moderated by Love Malone, CEO of The Gradient—will dive into Rich's creative journey, his thoughts on where the industry is headed, and how design continues to shape identity, storytelling, and the future of culture.",
+      "Presented as part of The Gradient's Blueprint Series, this fireside chat moderated by Love Malone, CEO of The Gradient will dive into Rich's creative journey, his thoughts on where the industry is headed, and how design continues to shape identity, storytelling, and the future of culture.",
     agenda: [
       {
         time: "10:30 am – 11:00 am",
@@ -82,7 +82,7 @@ const events = [
         answer: "Doors open at 10:30 am with programming beginning promptly at 11:00 am."
       },
       {
-        question: "Is this event open to non-members?",
+        question: "Is this event open to non members?",
         answer: "Yes, a limited number of guest tickets are available by RSVP."
       }
     ]
@@ -96,7 +96,7 @@ const events = [
     intro:
       "A live forum bringing together creative founders to discuss building brands, teams, and products in a new era of work.",
     description:
-      "Brand Futures Live focuses on how modern leaders are navigating rapid change in culture, technology, and consumer behavior—while still building brands that feel deeply human.",
+      "Brand Futures Live focuses on how modern leaders are navigating rapid change in culture, technology, and consumer behavior while still building brands that feel deeply human.",
     agenda: [
       {
         time: "5:00 pm – 5:30 pm",
